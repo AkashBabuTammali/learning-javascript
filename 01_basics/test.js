@@ -1,2 +1,3 @@
-var x = "Hellow World"
-console.log(x)
+var x = null;
+var y = Boolean(x)
+console.log(y)
