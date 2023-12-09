@@ -1,4 +1,4 @@
-let a = 1;
-let b = "1";
-console.log(a==b);
-console.log(a===b);
+const arr = ["HYDERABAD","MUMBAI","GURGAON","KOLKATA","CHENNAI"];
+arr.forEach((item,index,arr)=>{
+    console.log(`${item} ${index} ${arr}`);
+})
