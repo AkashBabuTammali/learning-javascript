@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="start">START</button>
+    <button id="end">END</button>
+</body>
+<script>
+    let interval;
+    const randomColor = function() {
+        let color = "#";
+        let hex = "0123456789ABCDEF";
+        for(let i=0;i<6;i++){
+            color += hex[Math.floor(Math.random()*16)];
+        }
+        return color;
+    }
+    document.getElementById("start").addEventListener("click",function(){
+        const changeBackground = function(){
+            document.body.style.backgroundColor = randomColor();
+        }
+        interval = setInterval(changeBackground,500);
+    });
+    document.getElementById("end").addEventListener("click",function(){
+        clearInterval(interval);
+        interval = null;
+    });
+</script>
+</html>
